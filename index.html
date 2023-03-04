@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Sondaggio Pizzeria</title>
+        <script>
+            var links = [
+                "https://docs.google.com/forms/d/1KN52Gox2qmL0xh_CdvHt723xEcYjDr9pvQKIZh-iIZw/edit",
+                "https://docs.google.com/forms/d/1kPt66aSijP0i5Vamcdku7h70t0vjWSNaNvxlWECWT08/edit?usp=sharing_eip_se_dm&ts=63ff3034",
+                "https://docs.google.com/forms/d/1RkvI_Qj1Nz2dt3D1S9f7ggQZ3kmAs-kf3fhODlFNa9Q/edit"];
+
+            openStuff = function () {
+                // get a random number between 0 and the number of links
+                var randIdx = Math.random() * links.length;
+                // round it, so it can be used as array index
+                randIdx = parseInt(randIdx, 10);
+                // construct the link to be opened
+                var link = links[randIdx];
+                // open it in a new window
+                // window.open(link);
+                window.location = link;
+            };
+        </script>
+    </head>
+    <body onload="openStuff()">
+    </body>
+</html>
